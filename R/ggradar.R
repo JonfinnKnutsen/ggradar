@@ -7,7 +7,7 @@
 
 
 ggradar <- function(plot.data,
-                             font.radar="Circular Air Light",
+                             font.radar="Helvetica",
                              values.radar = c("0%", "50%", "100%"),                       
                              axis.labels=colnames(plot.data)[-1],                             
                              grid.min=0,  #10,
@@ -268,7 +268,7 @@ base <- ggplot(axis$label) + xlab(NULL) + ylab(NULL) + coord_equal() +
                        "#00D1C1", "#FFAA91", "#B4A76C", "#9CA299", "#565A5C", "#00A04B", "#E54C20"), 100)
   }
   
-  base <- base + theme(legend.key.width=unit(3,"line")) + theme(text = element_text(size = 20,
+  base <- base + theme(legend.key.width=unit(3,"line")) + theme(text = element_text(size = 10,
                                                                                       family = font.radar)) +
   theme(legend.text = element_text(size = legend.text.size), legend.position="left") +
   theme(legend.key.height=unit(2,"line")) +
